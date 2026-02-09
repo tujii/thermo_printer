@@ -37,6 +37,10 @@ dependencies:
   blue_thermal_printer: ^1.2.3
   permission_handler: ^11.3.1
 
+dependency_overrides:
+  blue_thermal_printer:
+    path: packages/blue_thermal_printer
+
 dev_dependencies:
   flutter_test:
     sdk: flutter

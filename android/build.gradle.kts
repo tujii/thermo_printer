@@ -1,5 +1,3 @@
-import com.android.build.gradle.LibraryExtension
-
 allprojects {
     repositories {
         google()
@@ -19,21 +17,6 @@ subprojects {
 }
 subprojects {
     project.evaluationDependsOn(":app")
-}
-
-subprojects {
-    if (name == "blue_thermal_printer") {
-        plugins.withId("com.android.library") {
-            extensions.configure(LibraryExtension::class.java) {
-                if (compileSdkVersion == null || compileSdkVersion < 34) {
-                    compileSdk = 34
-                }
-                if (namespace.isNullOrBlank()) {
-                    namespace = "id.kakzaki.blue_thermal_printer"
-                }
-            }
-        }
-    }
 }
 
 tasks.register<Delete>("clean") {
