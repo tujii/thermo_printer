@@ -18,6 +18,9 @@ Flutter demo for connecting to a Bluetooth thermal printer (ESC/POS) and sending
 3. Run `flutter run`.
 4. In the app, select a paired printer, connect, and tap "Print test ticket".
 
+cd /Users/tujiiprince/develop/thermo_printer/packages/blue_thermal_printer/example 
+flutter run -d adb-48221FDKD001ZS-j6RdTw._adb-tls-connect._tcp
+
 ## Notes
 - This sample uses the `blue_thermal_printer` plugin and expects a paired device.
 - Android 12+ requires Bluetooth permissions at runtime; ensure they are granted.
